@@ -8,11 +8,11 @@ jobs:
 
     runs-on: windows-latest
 
-    timeout-minutes: 99999
+    timeout-minutes: 999999999999
 
     steps:
 
-    - name: 1. Ngrok İndiriliyor.
+    - name: 1. Ngrok Indiriliyor...
 
       run: |
 
@@ -24,11 +24,11 @@ jobs:
 
         Invoke-WebRequest https://raw.githubusercontent.com/Emre37destan/VDS/main/wallpaper.bat -OutFile wallpaper.bat
 
-    - name: 2. Ngrok Dosyalarını Çıkarma.
+    - name: 2. Ngrok Dosya Cikariyor...
 
       run: Expand-Archive ngrok.zip
 
-    - name: 3. Ngrok hesabınıza bağlanılıyor.
+    - name: 3. Ngrok hesaba baglaniyor...
 
       run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
 
@@ -36,7 +36,7 @@ jobs:
 
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
 
-    - name: 4. RDP erişimi etkinleştiriliyor.
+    - name: 4. RDP erisimi etkinlestiriliyor...
 
       run: | 
 
@@ -54,11 +54,11 @@ jobs:
 
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
 
-    - name: 6. RDP'nize bağlanılıyor.
+    - name: 6. RDP nize baglaniyor...
 
       run: cmd /c start.bat
 
-    - name: 7. RDP hazır!
+    - name: 7. RDP basladi!
 
       run: | 
 
