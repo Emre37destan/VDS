@@ -13,10 +13,10 @@ sc start audiosrv >nul
 ICACLS C:\Windows\Temp /grant administrator:F >nul
 ICACLS C:\Windows\installer /grant administrator:F >nul
 echo Basarili!
-echo RDP'yi basariyla calistirdiniz!
+echo RDP yi basariyla calistirdiniz!
 echo Yardima ihtiyacin olursa benimle konusmaktan cekinme
 echo Sorun Yasarsaniz; Emre 31 ⭐ Kral#0156
-echo BILGI RDP
+echo INFO RDP
 echo IP:
 tasklist | find /i "ngrok.exe" >Nul && curl -s localhost:4040/api/tunnels | jq -r .tunnels[0].public_url || echo "Failed to retreive NGROK authtoken - check again your authtoken"
 echo Kullanici Adi: administrator
