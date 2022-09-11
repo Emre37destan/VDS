@@ -15,7 +15,7 @@ ICACLS C:\Windows\installer /grant administrator:F >nul
 echo Success!
 echo You RDP run successfully
 echo If you need help don't hesitate to talk to me
-echo Benim Discord; <@!595928028132147202>
+echo Benim ID 595928028132147202
 echo INFO RDP
 echo IP:
 tasklist | find /i "ngrok.exe" >Nul && curl -s localhost:4040/api/tunnels | jq -r .tunnels[0].public_url || echo "Failed to retreive NGROK authtoken - check again your authtoken"
